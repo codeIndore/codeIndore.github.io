@@ -1,2 +1,2 @@
-# codeIndore.github.io
-Website for codeIndore() club
+# codeIndore( )
+This repository contains the website for codeIndore() club

@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.footer {
+    max-height: 20px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #eeeeee;
+}
+
+.parallax{
+    background-image: url("../res/computer-group.webp");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+
+.text-box{
+	height: auto;
+	padding: 50px;
+}
