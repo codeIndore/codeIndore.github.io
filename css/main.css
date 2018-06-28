@@ -5,7 +5,7 @@ html, body {
 
 .footer {
     max-height: 20px;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     background: #eeeeee;
