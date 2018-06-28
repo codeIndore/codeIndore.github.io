@@ -40,3 +40,7 @@ html {
 	height: auto;
 	padding: 50px;
 }
+
+.blog-posts {
+    margin-top: 10vh;
+}
