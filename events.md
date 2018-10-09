@@ -1,4 +1,3 @@
 ---
-title: Events
-layout: hackathon
+layout: events
 ---

@@ -1,1 +1,4 @@
 name: My Jekyll Website
+collections:
+    events:
+        output: false
