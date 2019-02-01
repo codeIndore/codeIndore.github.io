@@ -15,7 +15,7 @@ html {
 }
 
 .footer {
-    max-height: 20px;
+    max-height: 7em;
     position: relative;
     bottom: 0px;
     width: 100%;
