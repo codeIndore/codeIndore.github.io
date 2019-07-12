@@ -5,7 +5,7 @@ permalink: /coc/
 ---
 <h1 class="has-text-centered">Code of Conduct</h1>
 <h2 id="our-pledge">Our Pledge</h2>
-<p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our club, our projects and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
+<p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our events, our projects and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
 <h2 id="our-standards">Our Standards</h2>
 <p>Examples of behavior that contributes to creating a positive environment include:</p>
 <ul>
