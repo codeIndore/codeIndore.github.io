@@ -1,3 +1,12 @@
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+
+This project incorporates components from the projects listed below. The original copyright notices and the licenses under which codeIndore() received such components are set forth below. codeIndore() reserves all rights not expressly granted herein, whether by implication, estoppel or otherwise.
+
+1. jgthms/bulma (https://github.com/jgthms/bulma)
+
+%% Bulma NOTICES AND INFORMATION BEGIN HERE
+==============================================
+
 The MIT License (MIT)
 
 Copyright (c) 2018 Jeremy Thomas
