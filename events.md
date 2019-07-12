@@ -1,3 +1,4 @@
 ---
 layout: events
+permalink: /events/
 ---
