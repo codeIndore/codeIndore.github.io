@@ -4,11 +4,11 @@ layout: default
 {% assign event_list = site.events | sort: "event-date" %}
 
   <h1 class="has-text-centered">Events</h1>
-  <p class="has-text-centered">Join us for community events that are focused on learning, sharing and networking <br /><b>Page under Construction</b></p>
+  <p class="has-text-centered">Join us for community events that are focused on learning, sharing and networking</p>
     <br>
     <br>
     <h3>Upcoming Events</h3>
-    <table class="table is-fullwidth">
+    <table class="table is-striped">
       <thead>
         <th class="has-text-centered">Event</th>
         <th class="has-text-centered">Type</th>
@@ -17,6 +17,7 @@ layout: default
         <th class="has-text-centered">Description</th>
     </thead>
     <tbody>
+      {% assign i = 0 %}
       {% for event in event_list %}
         {% capture currentDate %}
             {{ site.time | date: '%F' }}
@@ -25,19 +26,29 @@ layout: default
             {{ event.event-date | date: '%F' }}
         {% endcapture %}
         {% if eventdate >= currentDate %}
-      <tr>
-            <td class="has-text-centered"><a href="{{ event.event-url }}">{{ event.title }}</a></td>
-            <td class="has-text-centered">{{ event.type }}</td>
-            <td class="has-text-centered">{{ event.event-date | date:"%b %d, %Y" }}</td>
-            <td class="has-text-centered">{{ event.city }}</td>
-            <td class="has-text-centered">{{ event.description }}</td>
+            {% assign i = 1 %}
+            <tr>
+                <td class="has-text-centered"><a href="{{ event.event-url }}">{{ event.title }}</a></td>
+                <td class="has-text-centered">{{ event.type }}</td>
+                <td class="has-text-centered">{{ event.event-date | date:"%b %d, %Y" }}</td>
+                <td class="has-text-centered">{{ event.location }}</td>
+                <td class="has-text-centered">{{ event.description }}</td>
             </tr>
       {% endif %}
       {% endfor %}
+      {% if i == 0 %}
+      <tr>
+          <td class="has-text-centered">TBD</td>
+          <td class="has-text-centered">TBD</td>
+          <td class="has-text-centered">TBD</td>
+          <td class="has-text-centered">TBD</td>
+          <td class="has-text-centered">TBD</td>
+      </tr>
+      {% endif %}
     </tbody>
 </table>
     <h3>Previous Events</h3>
-    <table class="table is-fullwidth">
+    <table class="table is-striped">
       <thead>
         <th class="has-text-centered">Event</th>
         <th class="has-text-centered">Type</th>
@@ -46,7 +57,7 @@ layout: default
         <th class="has-text-centered">Description</th>
     </thead>
     <tbody>
-      {% for event in event_list %}
+      {% for event in event_list reversed %}
       {% capture currentDate %}
           {{ site.time | date: '%F' }}
       {% endcapture %}
@@ -58,7 +69,7 @@ layout: default
             <td class="has-text-centered"><a href="{{ event.event-url }}">{{ event.title }}</a></td>
             <td class="has-text-centered">{{ event.type }}</td>
             <td class="has-text-centered">{{ event.event-date | date:"%b %d, %Y" }}</td>
-            <td class="has-text-centered">{{ event.city }}</td>
+            <td class="has-text-centered">{{ event.location }}</td>
             <td class="has-text-centered">{{ event.description }}</td>
             </tr>
       {% endif %}
