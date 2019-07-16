@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% if page.title %}
+  <h1 class="has-text-centered">{{ page.title }}</h1>
+{% endif %}
+
+<div class="has-text-centered">
+    {{ content }}
+</div>
+
+{% if site.posts.size > 0 %}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    {% for post in site.posts %}
+    {% unless post.exclude %}
+    <div class="card">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <a class="card-header-title" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        <div class="card-content">
+            <div class="content">
+                <p>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}...<a href="{{ post.url | relative_url }}">Read More</a></p>
+                <time class="is-size-7" datetime="{{ post.date }}">{{ post.date | date: date_format }}</time>
+            </div>
+        </div>
+    </div>
+    <br />
+    {% endunless %}
+    {% endfor %}
+
+{% endif %}
