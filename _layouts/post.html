@@ -1,0 +1,13 @@
+{% include header.html %}
+<div class="container content">
+    <h2 class="has-text-centered">{{ page.title }}</h2>
+    <br />
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <span class="is-size-6"><a class="author-name" href="{{ page.author-link }}">{{ page.author }}</a> |</span>
+    <time class="is-size-6" datetime="{{ page.date }}">{{ page.date | date: date_format }}</time>
+    <br /><br />
+    <div class="is-size-5">
+        {{ content }}
+    </div>
+</div>
+{% include footer.html %}

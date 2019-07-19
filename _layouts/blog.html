@@ -21,6 +21,7 @@ layout: default
         <div class="card-content">
             <div class="content">
                 <p>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}...<a href="{{ post.url | relative_url }}">Read More</a></p>
+                <span class="is-size-7"><a class="author-name" href="{{ post.author-link }}">{{ post.author }}</a> |</span>
                 <time class="is-size-7" datetime="{{ post.date }}">{{ post.date | date: date_format }}</time>
             </div>
         </div>

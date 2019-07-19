@@ -82,3 +82,8 @@ only screen and (max-width: 1000px) {
 .card-header-title {
     padding-bottom: 0rem;
 }
+
+.author-name {
+    text-decoration: underline;
+    color: inherit;
+}
