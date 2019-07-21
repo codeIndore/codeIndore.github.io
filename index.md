@@ -9,4 +9,4 @@ There exists a huge gap between the classroom and the tech industry. There is al
 <br /><br />
 We are a community of students that provides an environment of learning, networking,  enjoying, and progressing together. Join us in our upcoming [events](/events/) and be a part of our community.
 <br /> <br />
-You are welcome to any of our regular meetups, workshops, conferences, hackathons, or informal gatherings for loads of learning and fun. You can connect with us on any one of your preferred platforms [here](/connect/).
+You are welcome to any of our regular meetups, workshops, conferences, hackathons, or informal gatherings for loads of learning and fun. You can [connect with us](/connect/) on any one of your preferred platforms [here](/connect/).
