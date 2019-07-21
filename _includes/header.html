@@ -28,6 +28,9 @@
         <link rel="stylesheet" href="/css/bulma.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <link rel="stylesheet" href="/css/main.css">
+        {% if include.cannonical %}
+        <link rel="cannonical" href="{{ include.cannonical }}">
+        {% endif %}
     </head>
     <body class="has-navbar-fixed-top">
         <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
