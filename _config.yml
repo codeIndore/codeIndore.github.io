@@ -2,3 +2,4 @@ name: My Jekyll Website
 collections:
     events:
         output: false
+url: "https://codeindore.com"
