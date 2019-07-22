@@ -6,7 +6,8 @@ layout: default
 <div class="columns is-desktop">
     {% assign i = 0 %}
     {% for channel in channel_list %}
-    {% if i == 3 %}
+    {% assign remainder = i | modulo: 3 %}
+    {% if remainder == 0 %}
     </div>
     <div class="columns">
     {% endif %}
