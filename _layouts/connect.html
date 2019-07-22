@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign channel_list = site.channels | sort:"sort-order" %}
+{{ content }}
+<div class="columns is-desktop">
+    {% assign i = 0 %}
+    {% for channel in channel_list %}
+    {% if i == 3 %}
+    </div>
+    <div class="columns">
+    {% endif %}
+    <div class="column">
+        <div class="card">
+            <a href="{{ channel.channel-url }}" target="_blank">
+            <div class="card-image has-text-centered">
+                <br />
+                <figure class="image is-128x128 is-inline-block">
+                    <img src="{{ channel.channel-logo }}" alt="{{ channel.platform-name }} Logo">
+                </figure>
+            </div>
+            </a>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{ channel.platform-name }}</p>
+                        <p class="subtitle is-6"><a href="{{ channel.channel-url }}" target="_blank">{{ channel.channel-display-link }}</a></p>
+                    </div>
+                </div>
+                <div class="content">
+                    {{ channel.channel-content }}
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+    {% assign i = i | plus:1 %}
+    {% endfor %}
+</div>
