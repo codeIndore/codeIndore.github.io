@@ -1,10 +1,22 @@
 {% include header.html %}
     <div class="parallax"></div>
-    <div class="is-desktop is-vcentered text-box text-center">
-        <p class="subtitle has-text-centered container content">
-            {{ content | remove: '<p>' | remove: '</p>' }}
-        </p>
-        {% include sponsors.html %}
+        <div class="is-desktop is-vcentered text-box text-center">
+            <p class="subtitle has-text-centered container content">
+                {{ content | remove: '<p>' | remove: '</p>' }}
+            </p>
+            <hr>
+            <div class="container content">
+                <div class="columns is-desktop is-centered">
+                    <div class="column">
+                        {% include latestEventCard.html %}
+                    </div>
+                    <div class="column">
+                        {% include latestBlogCard.html %}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            {% include sponsors.html %}
         </div>
     </div>
 {% include footer.html%}

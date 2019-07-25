@@ -1,0 +1,20 @@
+{% assign events = site.events | sort: "event-date" %}
+<a href="/register/">
+    <div class="card">
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content">
+                    <p class="title is-4">Upcoming Event</p>
+                    <p class="title is-5">{{ events.last.title }}</p>
+                </div>
+            </div>
+            <div class="content">
+                <p>{{ events.last.description }}</p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            <time class="is-size-7" datetime="{{ events.last.event-date }}">{{ events.last.event-date | date: date_format }}</time>
+        </footer>
+    </div>
+</a>

@@ -91,3 +91,18 @@ only screen and (max-width: 1000px) {
 .card:hover {
     box-shadow: 3px 3px 4px 4px rgba(10, 10, 10, 0.1);
 }
+
+.card {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-footer {
+    margin-top: auto;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1.5rem;
+}
