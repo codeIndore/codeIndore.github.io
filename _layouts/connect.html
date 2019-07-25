@@ -7,9 +7,9 @@ layout: default
     {% assign i = 0 %}
     {% for channel in channel_list %}
     {% assign remainder = i | modulo: 3 %}
-    {% if remainder == 0 %}
+    {% if remainder == 0 and i != 0 %}
     </div>
-    <div class="columns">
+    <div class="columns is-desktop">
     {% endif %}
     <div class="column">
         <div class="card">

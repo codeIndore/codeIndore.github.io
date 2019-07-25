@@ -87,3 +87,7 @@ only screen and (max-width: 1000px) {
     text-decoration: underline;
     color: inherit;
 }
+
+.card:hover {
+    box-shadow: 3px 3px 4px 4px rgba(10, 10, 10, 0.1);
+}

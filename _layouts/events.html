@@ -26,9 +26,13 @@ layout: default
             {{ event.event-date | date: '%F' }}
         {% endcapture %}
         {% if eventdate >= currentDate %}
-            {% assign i = 1 %}
+            {% assign i = i | plus:1 %}
             <tr>
+                {% if i == 1 %}
+                <td class="has-text-centered"><a href="/register/" target="_blank">{{ event.title }}</a></td>
+                {% else %}
                 <td class="has-text-centered"><a href="{{ event.event-url }}" target="_blank">{{ event.title }}</a></td>
+                {% endif %}
                 <td class="has-text-centered">{{ event.type }}</td>
                 <td class="has-text-centered">{{ event.event-date | date:"%b %d, %Y" }}</td>
                 <td class="has-text-centered">{{ event.location }}</td>
