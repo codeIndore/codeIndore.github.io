@@ -6,7 +6,7 @@ layout: default
     <div class="content container">
         <p class="has-text-centered">Please fill your valuable feedback for this event. Your feedback helps us improve future events.</p>
     </div>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdgn3AOlyhJCcA8DWkx7FDOL8C4n7wawRT5_gG9ZaVvXbNK0A/formResponse"
+    <form action="{{ page.form.formurl }}"
       target="_self"
       id="bootstrapForm"
       method="POST">
@@ -21,47 +21,47 @@ layout: default
     </div>
 
 
-    <!-- Field type: "short" id: "1508204068" -->
+    <!-- Field type: "short" id: "{{ page.form.name-label }}" -->
     <div class="field">
-        <legend class="label" for="1508204068">Name</legend>
+        <legend class="label" for="{{ page.form.name-label }}">Name</legend>
         <div class="control">
-            <input id="1223500353" type="text" name="entry.1223500353" class="input" required>
+            <input id="{{ page.form.name }}" type="text" name="entry.{{ page.form.name }}" class="input" required>
         </div>
     </div>
 
 
-    <!-- Field type: "short" id: "1186849288" -->
+    <!-- Field type: "short" id: "{{ page.form.number-label }}" -->
     <div class="field">
-        <legend class="label" for="1186849288">Phone Number</legend>
+        <legend class="label" for="{{ page.form.number-label }}">Phone Number</legend>
         <div class="control">
-            <input id="1119659540" type="text" name="entry.1119659540" class="input" required>
+            <input id="{{ page.form.number }}" type="text" name="entry.{{ page.form.number }}" class="input" required>
         </div>
     </div>
 
 
-    <!-- Field type: "linear" id: "2137196546" -->
+    <!-- Field type: "linear" id: "{{ page.form.satisfaction-label }}" -->
     <div class="field">
-        <legend class="label" for="2137196546">How satisfied were you with this Localhost workshop?</legend>
+        <legend class="label" for="{{ page.form.satisfaction-label }}">How satisfied were you with this Localhost workshop?</legend>
         <div class="control">
             <div>
             <label class="radio">
-                <input type="radio" name="entry.1747016377" value="1" required>
+                <input type="radio" name="entry.{{ page.form.satisfaction }}" value="1" required>
                 1
             </label>
             <label class="radio">
-                <input type="radio" name="entry.1747016377" value="2" required>
+                <input type="radio" name="entry.{{ page.form.satisfaction }}" value="2" required>
                 2
             </label>
             <label class="radio">
-                <input type="radio" name="entry.1747016377" value="3" required>
+                <input type="radio" name="entry.{{ page.form.satisfaction }}" value="3" required>
                 3
             </label>
             <label class="radio">
-                <input type="radio" name="entry.1747016377" value="4" required>
+                <input type="radio" name="entry.{{ page.form.satisfaction }}" value="4" required>
                 4
             </label>
             <label class="radio">
-                <input type="radio" name="entry.1747016377" value="5" required>
+                <input type="radio" name="entry.{{ page.form.satisfaction }}" value="5" required>
                 5
             </label>
             </div>
@@ -69,29 +69,29 @@ layout: default
     </div>
 
 
-    <!-- Field type: "linear" id: "2064489387" -->
+    <!-- Field type: "linear" id: "{{ page.form.relevant-label }}" -->
     <div class="field">
-        <legend class="label" for="2064489387">How relevant and helpful do you think it was for you?</legend>
+        <legend class="label" for="{{ page.form.relevant-label }}">How relevant and helpful do you think it was for you?</legend>
         <div class="control">
             <div>
             <label class="radio">
-                <input type="radio" name="entry.305553560" value="1" required>
+                <input type="radio" name="entry.{{ page.form.relevant }}" value="1" required>
                 1
             </label>
             <label class="radio">
-                <input type="radio" name="entry.305553560" value="2" required>
+                <input type="radio" name="entry.{{ page.form.relevant }}" value="2" required>
                 2
             </label>
             <label class="radio">
-                <input type="radio" name="entry.305553560" value="3" required>
+                <input type="radio" name="entry.{{ page.form.relevant }}" value="3" required>
                 3
             </label>
             <label class="radio">
-                <input type="radio" name="entry.305553560" value="4" required>
+                <input type="radio" name="entry.{{ page.form.relevant }}" value="4" required>
                 4
             </label>
             <label class="radio">
-                <input type="radio" name="entry.305553560" value="5" required>
+                <input type="radio" name="entry.{{ page.form.relevant }}" value="5" required>
                 5
             </label>
             </div>
@@ -99,25 +99,25 @@ layout: default
     </div>
 
 
-    <!-- Field type: "short" id: "1131114772" -->
+    <!-- Field type: "short" id: "{{ page.form.improve-label }}" -->
     <div class="field">
-        <legend class="label" for="1131114772">How could we have improved this event?</legend>
+        <legend class="label" for="{{ page.form.improve-label }}">How could we have improved this event?</legend>
         <div class="control">
-            <input id="1340586078" type="text" name="entry.1340586078" class="input" >
+            <input id="{{ page.form.improve }}" type="text" name="entry.{{ page.form.improve }}" class="input" >
         </div>
     </div>
 
 
-    <!-- Field type: "short" id: "234554653" -->
+    <!-- Field type: "short" id: "{{ page.form.feedback-label }}" -->
     <div class="field">
-        <legend class="label" for="234554653">Any other feedback for the event?</legend>
+        <legend class="label" for="{{ page.form.feedback-label }}">Any other feedback for the event?</legend>
         <div class="control">
-            <input id="879050699" type="text" name="entry.879050699" class="input" >
+            <input id="{{ page.form.feedback }}" type="text" name="entry.{{ page.form.feedback }}" class="input" >
         </div>
     </div>
 
-    <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="-7418162051004310469">
+    <input type="hidden" name="fvv" value="{{ page.form.fvv }}">
+    <input type="hidden" name="fbzx" value="{{ page.form.fbzx }}">
     <!--
         CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
         This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
