@@ -6,7 +6,7 @@ layout: default
     <div class="content container">
         <p class="has-text-centered">Fill the form to register yourself for <b>{{ page.title }}</b>. <br />Time:{{ page.time }}, Date:{{ page.date }}<br /> Venue: {{ page.venue }}<br />See you at the event!!</p>
     </div>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLScOdxIdpAcPXUcaoO9iOWzlqVc9-id3UZS2irB1xWp6Phmitg/formResponse"
+    <form action="{{ page.form.formurl }}"
           target="_self"
           id="bootstrapForm"
           method="POST">
