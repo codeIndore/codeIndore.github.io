@@ -1,0 +1,134 @@
+---
+layout: default
+---
+<section class="section">
+    <h1 class="has-text-centered">Feedback</h1>
+    <div class="content container">
+        <p class="has-text-centered">Please fill your valuable feedback for this event. Your feedback helps us improve future events.</p>
+    </div>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdgn3AOlyhJCcA8DWkx7FDOL8C4n7wawRT5_gG9ZaVvXbNK0A/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="POST">
+    <div class="field">
+        <h2>Localhost Hack the Technical Interview Feedback<br><small></small></h2>
+    </div>
+    <div class="field">
+        <legend class="label" for="">Email</legend>
+        <div class="control">
+            <input id="emailAddress" type="email" name="emailAddress" class="input" required>
+        </div>
+    </div>
+
+
+    <!-- Field type: "short" id: "1508204068" -->
+    <div class="field">
+        <legend class="label" for="1508204068">Name</legend>
+        <div class="control">
+            <input id="1223500353" type="text" name="entry.1223500353" class="input" required>
+        </div>
+    </div>
+
+
+    <!-- Field type: "short" id: "1186849288" -->
+    <div class="field">
+        <legend class="label" for="1186849288">Phone Number</legend>
+        <div class="control">
+            <input id="1119659540" type="text" name="entry.1119659540" class="input" required>
+        </div>
+    </div>
+
+
+    <!-- Field type: "linear" id: "2137196546" -->
+    <div class="field">
+        <legend class="label" for="2137196546">How satisfied were you with this Localhost workshop?</legend>
+        <div class="control">
+            <div>
+            <label class="radio">
+                <input type="radio" name="entry.1747016377" value="1" required>
+                1
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.1747016377" value="2" required>
+                2
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.1747016377" value="3" required>
+                3
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.1747016377" value="4" required>
+                4
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.1747016377" value="5" required>
+                5
+            </label>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Field type: "linear" id: "2064489387" -->
+    <div class="field">
+        <legend class="label" for="2064489387">How relevant and helpful do you think it was for you?</legend>
+        <div class="control">
+            <div>
+            <label class="radio">
+                <input type="radio" name="entry.305553560" value="1" required>
+                1
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.305553560" value="2" required>
+                2
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.305553560" value="3" required>
+                3
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.305553560" value="4" required>
+                4
+            </label>
+            <label class="radio">
+                <input type="radio" name="entry.305553560" value="5" required>
+                5
+            </label>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Field type: "short" id: "1131114772" -->
+    <div class="field">
+        <legend class="label" for="1131114772">How could we have improved this event?</legend>
+        <div class="control">
+            <input id="1340586078" type="text" name="entry.1340586078" class="input" >
+        </div>
+    </div>
+
+
+    <!-- Field type: "short" id: "234554653" -->
+    <div class="field">
+        <legend class="label" for="234554653">Any other feedback for the event?</legend>
+        <div class="control">
+            <input id="879050699" type="text" name="entry.879050699" class="input" >
+        </div>
+    </div>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="-7418162051004310469">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+    <div class="has-text-centered">
+        <input class="button is-link" type="submit" value="Submit">
+    </div>
+    </form>
+
+</section>
+{% include registerScript.html %}
