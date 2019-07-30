@@ -1,6 +1,7 @@
 ---
 layout: register
 permalink: /register/
+open: false
 title: "MLH Localhost: Hack The Technical Interview"
 date: "29th July 2019"
 time: "2 PM to 4 PM"
