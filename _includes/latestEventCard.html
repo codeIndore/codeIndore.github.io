@@ -4,7 +4,17 @@
         <div class="card-content">
             <div class="media">
                 <div class="media-content">
-                    <p class="title is-4">Upcoming Event</p>
+                    {% capture currentDate %}
+                        {{ site.time | date: '%F' }}
+                    {% endcapture %}
+                    {%capture eventdate %}
+                        {{ events.last.event-date | date: '%F' }}
+                    {% endcapture %}
+                    {% if eventdate >= currentDate %}
+                        <p class="title is-4">Upcoming Event</p>
+                    {% else %}
+                        <p class="title is-4">Last Event</p>
+                    {% endif %}
                     <p class="title is-5">{{ events.last.title }}</p>
                 </div>
             </div>
