@@ -61,7 +61,9 @@ layout: default
         <th class="has-text-centered">Description</th>
     </thead>
     <tbody>
+      {% assign i = 0 %}
       {% for event in event_list reversed %}
+      {% assign i = i | plus:1 %}
       {% capture currentDate %}
           {{ site.time | date: '%F' }}
       {% endcapture %}
@@ -70,13 +72,47 @@ layout: default
       {% endcapture %}
       {% if eventdate < currentDate %}
       <tr>
-            <td class="has-text-centered"><a href="{{ event.event-url }}" target="_blank">{{ event.title }}</a></td>
+            <td class="has-text-centered"><a href="#" id="{{ i }}" onclick="openModal('modal{{ i }}')">{{ event.title }}</a></td>
             <td class="has-text-centered">{{ event.type }}</td>
             <td class="has-text-centered">{{ event.event-date | date:"%b %d, %Y" }}</td>
             <td class="has-text-centered">{{ event.location }}</td>
             <td class="has-text-centered">{{ event.description }}</td>
-            </tr>
+      </tr>
+      <div class="modal" id="modal{{ i }}">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+              <header class="modal-card-head">
+                  <p class="modal-card-title">{{ event.title }}</p>
+                  <button class="delete" aria-label="close" onclick="closeModal('modal{{ i }}')"></button>
+              </header>
+              <div class="modal-card-body">
+                  Event details will be updated soon
+              </div>
+              <footer class="modal-card-foot">
+                  <button class="button" onclick="closeModal('modal{{ i }}')">Close</button>
+              </footer>
+          </div>
+      </div>
       {% endif %}
       {% endfor %}
     </tbody>
 </table>
+
+<script type="text/javascript">
+    document.addEventListener('keydown', function(event) {
+        if(event.key == "Escape") {
+            var activeModals = document.getElementsByClassName("modal is-active");
+            if(activeModals.length > 0) {
+                closeModal(document.getElementsByClassName("modal is-active")[0].id);
+            }
+        }
+    });
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.add('is-active');
+        return false;
+    }
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('is-active');
+        return false;
+    }
+</script>
