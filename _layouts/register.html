@@ -1,12 +1,9 @@
 ---
 layout: default
 ---
-<section class="section">
     <h1 class="has-text-centered">Register</h1>
-    <div class="content container">
         {% if page.open %}
         <p class="has-text-centered">Fill the form to register yourself for <b>{{ page.title }}</b>. <br />Time:{{ page.time }}, Date:{{ page.date }}<br /> Venue: {{ page.venue }}<br />See you at the event!!</p>
-    </div>
     <form action="{{ page.form.formurl }}"
           target="_self"
           id="bootstrapForm"
@@ -81,8 +78,7 @@ layout: default
     </form>
 
     {% else %}
-    <p class="has-text-centered">Registrations are currently not open</p>
-    </div>
+    <p class="has-text-centered">Registrations are currently not open.</p>
     {% endif %}
 </section>
 {% include registerScript.html %}
