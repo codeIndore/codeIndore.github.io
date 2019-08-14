@@ -1,7 +1,7 @@
 ---
 layout: register
 permalink: /register/
-open: false
+open: true
 title: "MLH Localhost: Build and Deploy your first website"
 date: "17th August 2019"
 time: "2 PM to 4 PM"
